@@ -15,4 +15,5 @@
 
 <script lang="ts" setup>
   import HelloWorld from '@/components/HelloWorld.vue'
+  console.log('This is my first vue app');
 </script>
