@@ -1,29 +1,18 @@
-<script setup>
-import  IntroToVue  from '@/components/IntroToVue.vue'
-import { ref } from 'vue';
-import Header  from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
-import Main from '@/components/Main.vue';
-let name = ref('Guest')
-const year = ref(2014)
-
-</script>
-
 <template>
-  <Header/>  
-
-  <!-- <IntroToVue /> -->
-  <Main/>
-
-  <Footer/>
-  
+  <v-app>
+    <v-main>
+      <HelloWorld />
+      <v-btn
+        class="m-2"
+        icon="mdi-theme-light-dark"
+        location="top right"
+        position="absolute"
+        @click="$vuetify.theme.cycle()"
+      />
+    </v-main>
+  </v-app>
 </template>
 
-<style scoped>
-
-
-
-
-
-
-</style>
+<script lang="ts" setup>
+  import HelloWorld from '@/components/HelloWorld.vue'
+</script>
